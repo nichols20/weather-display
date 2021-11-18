@@ -1,14 +1,14 @@
 body {
-  background-color: grey;
+  background: url("./Cloudy.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .navbar {
-  background-color: blue;
 }
 
 div {
   height: 50rem;
-  background-color: yellow;
 }
 
 .searchBar {
