@@ -6,10 +6,11 @@ import SearchBar from "./components/searchbar";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="header">
+      <h1>Welcome to my weather app</h1>
       <SearchBar />
     </div>
   );
 }
+
 export default App;
