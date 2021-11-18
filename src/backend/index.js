@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 const axios = require("axios").default;
 
-const apiKey = "73faabe2b55b90dc0d0c89c4899b2a94";
-
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
