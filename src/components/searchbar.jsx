@@ -5,7 +5,7 @@ class SearchBar extends Component {
     return (
       <div>
         <input type="text" className="weatherSearch" />
-        <button className="searchButton" />
+        <button className="searchButton"> Submit</button>
       </div>
     );
   }
