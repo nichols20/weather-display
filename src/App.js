@@ -1,12 +1,17 @@
 import "./App.css";
 import React from "react";
-import SearchBar from "./components/searchbar";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import HomePage from "./components/homePage";
 
 function App() {
   return (
-    <div className="header">
-      <h1>Welcome to my weather app</h1>
-      <SearchBar />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/weatherQuery" element={<HomePage />} />
+          <Route path="*" element={<Navigate to="/weatherquery" />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
