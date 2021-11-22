@@ -35,6 +35,6 @@ app.get("/weatherquery/:zip", async (req, res) => {
   //so that weather query data may be used
 });
 
-app.listen(90, () => console.log("listening on port 80"));
+app.listen(90, () => console.log("listening on port 90"));
 
 module.exports = app;

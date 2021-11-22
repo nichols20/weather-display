@@ -10,7 +10,8 @@ class SearchBar extends Component {
           className="searchButton"
           onClick={() => {
             const searchValue = document.getElementById("weatherSearch").value;
-            submitQuery(searchValue);
+            //submitQuery(searchValue);
+            window.location = `/weatherquery/${searchValue}`;
           }}
         >
           Submit
