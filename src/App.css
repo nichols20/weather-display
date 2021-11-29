@@ -23,10 +23,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-div {
-  height: 30rem;
-}
-
 .searchBar {
   position: absolute;
   top: 300px;
@@ -71,4 +67,20 @@ div {
 .searchButton:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
+}
+
+.reportContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherCard {
+  width: 30rem;
+  height: 36rem;
+  border-radius: 34px;
+  background: #2d4578;
+  box-shadow: 20px 20px 41px #23355c, -20px -20px 41px #375594;
 }

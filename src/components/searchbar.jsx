@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import submitQuery from "./formSubmit";
 
 class SearchBar extends Component {
   render() {

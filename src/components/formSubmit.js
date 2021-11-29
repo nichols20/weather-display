@@ -1,6 +1,7 @@
 import { validate } from "./validateQuery";
 
-const axios = require("axios").default;
+//const axios = require("axios").default;
+const apiKey = "73faabe2b55b90dc0d0c89c4899b2a94";
 
 async function submitQuery(props) {
   //Incase I decide to add aditional parameters such as city, country etc.. I've decided to place the zip property in an object so I can just
@@ -13,8 +14,6 @@ async function submitQuery(props) {
 
   const { error } = await validate(submission);
   if (error) return console.log(error.message);
-
-  const apiKey = "73faabe2b55b90dc0d0c89c4899b2a94";
 
   const config = {
     method: "get",
@@ -30,6 +29,7 @@ async function submitQuery(props) {
   */
 
   //console.log(query);
+  return 4;
 }
 
 export default submitQuery;
