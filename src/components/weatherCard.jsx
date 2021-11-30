@@ -1,3 +1,4 @@
+import { isError, types } from "joi";
 import React from "react";
 
 /* To extract the api call data from the getResults promise I need to call this promise inside of a lifecycle hook.
@@ -9,12 +10,24 @@ class WeatherCard extends React.Component {
     this.state = { data: [] };
   }
 
+  //Calling a promise inside of the didMount lifecycle hook so that I can retrieve promise data before page finalizes render
   async componentDidMount() {
-    const result = await this.props.getResults();
-    this.setState({ data: [result] });
+    //Using window.location to grab the zipCode user submitted in the searchbar
+    const search = window.location.pathname.split("/");
+
+    //I placed the promise inside of a try catch block so that when an error is thrown during validation the catch can return it and display
+    //it in the DOM for the user
+    try {
+      const result = await this.props.getResults(search[2]);
+      console.log("success result");
+      return result;
+    } catch (ex) {
+      return this.setState({ data: [ex.message] });
+    }
   }
 
   render() {
+    console.log(this.state.data);
     return (
       <div>
         {this.state.data.map((data) => (

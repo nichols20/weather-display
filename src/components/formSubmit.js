@@ -10,16 +10,19 @@ async function submitQuery(props) {
     zip: props,
   };
 
-  if (!Number(props)) return console.log("this is not a number");
+  if (!Number(props))
+    throw new Error("The zip code submitted is not a valid number");
 
   const { error } = await validate(submission);
-  if (error) return console.log(error.message);
+  if (error) throw new Error(error.message);
 
   const config = {
     method: "get",
     url: `https://api.openweathermap.org/data/2.5/weather?zip=${props}&appid=${apiKey}`,
     headers: {},
   };
+
+  console.log(`submit query function active ${props}`);
 
   /*
   const query = await axios(config).then(function (response) {

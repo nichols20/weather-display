@@ -3,8 +3,8 @@ import submitQuery from "./formSubmit";
 import WeatherCard from "./weatherCard";
 
 class WeatherReport extends React.Component {
-  getResults = async () => {
-    const result = await submitQuery("08060");
+  getResults = async (zip) => {
+    const result = await submitQuery(zip);
     return result;
   };
 
