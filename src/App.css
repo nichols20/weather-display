@@ -89,3 +89,24 @@ body {
   color: red;
   font-size: 3rem;
 }
+
+.temp {
+  position: absolute;
+  right: 220px;
+  top: 150px;
+  width: 200px;
+  color: white;
+  font-size: 6rem;
+}
+
+.tempIcon {
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  border-radius: 30px;
+  border: solid;
+  border-width: 3px;
+  border-color: white;
+}

@@ -40,9 +40,13 @@ class WeatherCard extends React.Component {
 
     return (
       <div className="weatherCard">
-        {data.map((data) => (
-          <div key={data}>{data}</div>
-        ))}
+        <div className="temp">
+          {data[0]}
+          <span className="tempIcon"></span>
+        </div>
+        <div className="feels_like">{data[1]}</div>
+        <div className="temp_min">{data[2]}</div>
+        <div className="temp_max">{data[3]}</div>
       </div>
     );
   }
