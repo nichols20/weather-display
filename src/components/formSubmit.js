@@ -1,6 +1,6 @@
 import { validate } from "./validateQuery";
 
-//const axios = require("axios").default;
+const axios = require("axios").default;
 const apiKey = "73faabe2b55b90dc0d0c89c4899b2a94";
 
 async function submitQuery(props) {
@@ -22,17 +22,27 @@ async function submitQuery(props) {
     headers: {},
   };
 
-  console.log(`submit query function active ${props}`);
-
   /*
   const query = await axios(config).then(function (response) {
     const result = response.data.main;
     return result;
   });
+  
+
+  console.log(query);
+  return query;
   */
 
-  //console.log(query);
-  return 4;
+  const query = {
+    temp: 277.65,
+    feels_like: 277.65,
+    temp_min: 274.84,
+    temp_max: 279.23,
+    pressure: 1015,
+    humidity: 69,
+  };
+
+  return query;
 }
 
 export default submitQuery;

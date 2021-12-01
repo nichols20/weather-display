@@ -84,3 +84,8 @@ body {
   background: #2d4578;
   box-shadow: 20px 20px 41px #23355c, -20px -20px 41px #375594;
 }
+
+.reportError {
+  color: red;
+  font-size: 3rem;
+}

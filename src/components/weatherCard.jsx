@@ -1,4 +1,3 @@
-import { isError, types } from "joi";
 import React from "react";
 
 /* To extract the api call data from the getResults promise I need to call this promise inside of a lifecycle hook.
@@ -7,7 +6,7 @@ Which means I wil have to change this WeatherCard stateless component into a cla
 class WeatherCard extends React.Component {
   constructor() {
     super();
-    this.state = { data: [] };
+    this.state = { data: [], error: false };
   }
 
   //Calling a promise inside of the didMount lifecycle hook so that I can retrieve promise data before page finalizes render
@@ -20,27 +19,45 @@ class WeatherCard extends React.Component {
     try {
       const result = await this.props.getResults(search[2]);
       console.log("success result");
-      return result;
+      console.log(result);
+      this.setState({
+        data: [
+          result.temp,
+          result.feels_like,
+          result.temp_min,
+          result.temp_max,
+        ],
+      });
     } catch (ex) {
-      return this.setState({ data: [ex.message] });
+      return this.setState({ data: [ex.message], error: true });
     }
   }
 
-  render() {
-    console.log(this.state.data);
+  returnJSX() {
+    const { data, error } = this.state;
+
+    if (error) return <div className="reportError">{data}</div>;
+
     return (
-      <div>
-        {this.state.data.map((data) => (
-          <div key="weatherQuery">{data}</div>
+      <div className="weatherCard">
+        {data.map((data) => (
+          <div key={data}>{data}</div>
         ))}
       </div>
     );
+  }
+
+  render() {
+    return <div>{this.returnJSX()}</div>;
   }
 }
 
 export default WeatherCard;
 
 /*
+{this.state.data.map((data) => (
+  <div key="weatherQuery">{data}</div>
+))}
 const WeatherCard = ({ getResults }) => {
   const result = React.useEffect(async () => {
     const result = await getResults();
