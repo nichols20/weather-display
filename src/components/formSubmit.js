@@ -33,11 +33,15 @@ async function submitQuery(props) {
   return query;
   */
 
+  function kelvinToFahrenheit(temp) {
+    return Math.round((temp - 273.15) * 1.8 + 32);
+  }
+
   const query = {
-    temp: 277.65,
-    feels_like: 277.65,
-    temp_min: 274.84,
-    temp_max: 279.23,
+    temp: kelvinToFahrenheit(277.65),
+    feels_like: kelvinToFahrenheit(277.65),
+    temp_min: kelvinToFahrenheit(274.84),
+    temp_max: kelvinToFahrenheit(279.23),
     pressure: 1015,
     humidity: 69,
   };
