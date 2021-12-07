@@ -1,4 +1,5 @@
 import React from "react";
+import "animate.css";
 
 /* To extract the api call data from the getResults promise I need to call this promise inside of a lifecycle hook.
 Which means I wil have to change this WeatherCard stateless component into a class component*/
@@ -27,6 +28,7 @@ class WeatherCard extends React.Component {
           result.feels_like,
           result.temp_min,
           result.temp_max,
+          result.humidity,
         ],
       });
     } catch (ex) {
@@ -48,6 +50,18 @@ class WeatherCard extends React.Component {
         </div>
         <div className="temp_min">L:{data[3]}</div>
         <div className="temp_max">H:{data[4]}</div>
+        <div className="feels_like">
+          <p className=" animate__animated animate__lightSpeedInLeft animate__delay-1s">
+            Feels Like
+          </p>
+          <div className="feels_temp animate__animated animate__fadeIn animate__delay-1s">
+            {data[2]}
+          </div>
+          <span className="feelsLikeIcon animate__animated animate__fadeIn animate__delay-1s"></span>
+        </div>
+        <div className="humidity">
+          <p>Humidity</p> <div>{data[5]}%</div>
+        </div>
       </div>
     );
   }
@@ -60,10 +74,6 @@ class WeatherCard extends React.Component {
 export default WeatherCard;
 
 /*
-        <div className="feels_like">
-          <p>Feels Like:</p>
-          {data[2]}
-        </div>
 {this.state.data.map((data) => (
   <div key="weatherQuery">{data}</div>
 ))}
