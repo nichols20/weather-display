@@ -46,6 +46,7 @@ class WeatherCard extends React.Component {
           {data[1]}
           <span className="tempIcon"></span>
         </div>
+        <div className="temp_min">L:{data[3]}</div>
         <div className="temp_max">H:{data[4]}</div>
       </div>
     );
@@ -59,7 +60,6 @@ class WeatherCard extends React.Component {
 export default WeatherCard;
 
 /*
-<div className="temp_min">{data[3]}</div>
         <div className="feels_like">
           <p>Feels Like:</p>
           {data[2]}

@@ -92,7 +92,7 @@ body {
 
 .temp {
   position: absolute;
-  right: 37rem;
+  right: 36.2rem;
   top: 16.5rem;
   width: 200px;
   color: white;
@@ -115,8 +115,20 @@ body {
   background-color: red;
 }
 
+.temp_max {
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 23rem;
+  left: 41rem;
+}
+
 .temp_min {
-  background-color: white;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 23rem;
+  left: 46rem;
 }
 
 .queryLocation {
