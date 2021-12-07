@@ -22,6 +22,7 @@ class WeatherCard extends React.Component {
       console.log(result);
       this.setState({
         data: [
+          result.name,
           result.temp,
           result.feels_like,
           result.temp_min,
@@ -40,13 +41,12 @@ class WeatherCard extends React.Component {
 
     return (
       <div className="weatherCard">
+        <h1 className="queryLocation">{data[0]}</h1>
         <div className="temp">
-          {data[0]}
+          {data[1]}
           <span className="tempIcon"></span>
         </div>
-        <div className="feels_like">{data[1]}</div>
-        <div className="temp_min">{data[2]}</div>
-        <div className="temp_max">{data[3]}</div>
+        <div className="temp_max">H:{data[4]}</div>
       </div>
     );
   }
@@ -59,6 +59,11 @@ class WeatherCard extends React.Component {
 export default WeatherCard;
 
 /*
+<div className="temp_min">{data[3]}</div>
+        <div className="feels_like">
+          <p>Feels Like:</p>
+          {data[2]}
+        </div>
 {this.state.data.map((data) => (
   <div key="weatherQuery">{data}</div>
 ))}

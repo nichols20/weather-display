@@ -24,10 +24,14 @@ async function submitQuery(props) {
 
   /*
   const query = await axios(config).then(function (response) {
-    const result = response.data.main;
+    const result = response.data;
     return result;
   });
   
+
+  query.name= 'mount holly'
+
+  query.main = 'weather information needed'
 
   console.log(query);
   return query;
@@ -38,6 +42,7 @@ async function submitQuery(props) {
   }
 
   const query = {
+    name: "Mount Holly",
     temp: kelvinToFahrenheit(277.65),
     feels_like: kelvinToFahrenheit(277.65),
     temp_min: kelvinToFahrenheit(274.84),

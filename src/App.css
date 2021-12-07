@@ -92,8 +92,8 @@ body {
 
 .temp {
   position: absolute;
-  right: 220px;
-  top: 150px;
+  right: 37rem;
+  top: 16.5rem;
   width: 200px;
   color: white;
   font-size: 6rem;
@@ -109,4 +109,19 @@ body {
   border: solid;
   border-width: 3px;
   border-color: white;
+}
+
+.feels_like {
+  background-color: red;
+}
+
+.temp_min {
+  background-color: white;
+}
+
+.queryLocation {
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 4rem;
 }
