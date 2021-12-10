@@ -27,14 +27,10 @@ async function submitQuery(props) {
     const result = response.data;
     return result;
   });
-  
 
-  query.name= 'mount holly'
-
-  query.main = 'weather information needed'
-
-  console.log(query);
+  console.log(query.weather[0].id);
   return query;
+
   */
 
   function kelvinToFahrenheit(temp) {
@@ -49,6 +45,7 @@ async function submitQuery(props) {
     temp_max: kelvinToFahrenheit(279.23),
     pressure: 1015,
     humidity: 69,
+    weatherID: 500,
   };
 
   return query;

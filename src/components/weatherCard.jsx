@@ -29,10 +29,19 @@ class WeatherCard extends React.Component {
           result.temp_min,
           result.temp_max,
           result.humidity,
+          result.weatherID,
         ],
       });
     } catch (ex) {
       return this.setState({ data: [ex.message], error: true });
+    }
+  }
+
+  //Creating a function to dynamically set the className of the weatherCard
+  //dependant on the result of the weatherID returned from the weather API
+  weatherClass(ID) {
+    if (ID > 499 && ID < 532) {
+      return "weatherCard  weather-rain";
     }
   }
 
@@ -42,7 +51,7 @@ class WeatherCard extends React.Component {
     if (error) return <div className="reportError">{data}</div>;
 
     return (
-      <div className="weatherCard">
+      <div className={this.weatherClass(data[6])}>
         <h1 className="queryLocation">{data[0]}</h1>
         <div className="temp">
           {data[1]}
