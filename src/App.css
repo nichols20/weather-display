@@ -79,6 +79,7 @@ body {
 }
 
 .weatherCard {
+  background: #2d4578;
   position: absolute;
   left: 34vw;
   top: 18vh;
@@ -91,6 +92,10 @@ body {
 .weather-rain {
   background: url("../src/rain.gif");
   background-size: cover;
+}
+
+.weather-thunderstorm {
+  background: url("../src/thunderstorm.gif");
 }
 
 .reportError {

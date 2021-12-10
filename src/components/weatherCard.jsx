@@ -42,6 +42,10 @@ class WeatherCard extends React.Component {
   weatherClass(ID) {
     if (ID > 499 && ID < 532) {
       return "weatherCard  weather-rain";
+    } else if (ID > 199 && ID < 233) {
+      return "weatherCard  weather-thunderstorm";
+    } else {
+      return "weatherCard";
     }
   }
 
