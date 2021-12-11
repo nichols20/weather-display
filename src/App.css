@@ -116,6 +116,11 @@ body {
   background-size: cover;
 }
 
+.weather-cloudy {
+  background: url("../src/weather-gifs/cloudy.jpg");
+  background-size: cover;
+}
+
 .reportError {
   color: red;
   font-size: 3rem;
