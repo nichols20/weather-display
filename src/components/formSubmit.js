@@ -22,33 +22,27 @@ async function submitQuery(props) {
     headers: {},
   };
 
-  /*
   const query = await axios(config).then(function (response) {
     const result = response.data;
     return result;
   });
 
-  console.log(query.weather[0].id);
-  return query;
-
-  */
-
   function kelvinToFahrenheit(temp) {
     return Math.round((temp - 273.15) * 1.8 + 32);
   }
 
-  const query = {
-    name: "Mount Holly",
-    temp: kelvinToFahrenheit(277.65),
-    feels_like: kelvinToFahrenheit(277.65),
-    temp_min: kelvinToFahrenheit(274.84),
-    temp_max: kelvinToFahrenheit(279.23),
-    pressure: 1015,
-    humidity: 69,
-    weatherID: 803,
+  const weather = {
+    name: query.name,
+    temp: kelvinToFahrenheit(query.main.temp),
+    feels_like: kelvinToFahrenheit(query.main.feels_like),
+    temp_min: kelvinToFahrenheit(query.main.temp_min),
+    temp_max: kelvinToFahrenheit(query.main.temp_max),
+    pressure: query.main.pressure,
+    humidity: query.main.humidity,
+    weatherID: query.weather[0].id,
   };
 
-  return query;
+  return weather;
 }
 
 export default submitQuery;

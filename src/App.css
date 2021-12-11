@@ -81,8 +81,11 @@ body {
 .weatherCard {
   background: #2d4578;
   position: absolute;
-  left: 34vw;
-  top: 18vh;
+  left: 0;
+  right: 0;
+  top: 12vh;
+  margin-left: auto;
+  margin-right: auto;
   width: 30rem;
   height: 36rem;
   border-radius: 34px;
