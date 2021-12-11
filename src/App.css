@@ -98,6 +98,12 @@ body {
   background: url("../src/thunderstorm.gif");
 }
 
+.weather-drizzle {
+  background: url("../src/drizzle.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .reportError {
   color: red;
   font-size: 3rem;

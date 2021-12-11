@@ -40,11 +40,10 @@ class WeatherCard extends React.Component {
   //Creating a function to dynamically set the className of the weatherCard
   //dependant on the result of the weatherID returned from the weather API
   weatherClass(ID) {
-    if (ID > 499 && ID < 532) {
-      return "weatherCard  weather-rain";
-    } else if (ID > 199 && ID < 233) {
-      return "weatherCard  weather-thunderstorm";
-    } else {
+    if (ID > 199 && ID < 233) return "weatherCard  weather-thunderstorm";
+    else if (ID > 299 && ID < 322) return "weatherCard  weather-drizzle";
+    else if (ID > 499 && ID < 532) return "weatherCard  weather-rain";
+    else {
       return "weatherCard";
     }
   }
