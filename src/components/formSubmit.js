@@ -45,7 +45,7 @@ async function submitQuery(props) {
     temp_max: kelvinToFahrenheit(279.23),
     pressure: 1015,
     humidity: 69,
-    weatherID: 300,
+    weatherID: 800,
   };
 
   return query;

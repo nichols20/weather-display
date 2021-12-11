@@ -90,18 +90,30 @@ body {
 }
 
 .weather-rain {
-  background: url("../src/rain.gif");
+  background: url("../src/weather-gifs/rain.gif");
   background-size: cover;
 }
 
 .weather-thunderstorm {
-  background: url("../src/thunderstorm.gif");
+  background: url("../src/weather-gifs/thunderstorm.gif");
 }
 
 .weather-drizzle {
-  background: url("../src/drizzle.gif");
+  background: url("../src/weather-gifs/drizzle.gif");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.weather-snow {
+  background: url("../src/weather-gifs/snow.gif"),
+    url("../src/weather-gifs/night.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.weather-clear {
+  background: url("../src/weather-gifs/clear.jpg");
+  background-size: cover;
 }
 
 .reportError {
