@@ -4,7 +4,12 @@ class SearchBar extends Component {
   render() {
     return (
       <span className="searchBar">
-        <input type="text" className="weatherSearch" id="weatherSearch" />
+        <input
+          type="text"
+          placeholder="type US Zipcode here"
+          className="weatherSearch"
+          id="weatherSearch"
+        />
         <button
           className="searchButton"
           onClick={() => {
